@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>{% block titulo %}{% endblock %}</title>
+
+</head>
+<body>
+    <a href="{%url 'Principal'%}">Principal</a>
+    <a href="{%url 'Cursos'%}">Cursos</a>
+    <a href="{%url 'Contacto'%}">Contactanos</a>
+
+    {% block contenedor %}
+
+    {% endblock %}
+    
+</body>
+</html>
