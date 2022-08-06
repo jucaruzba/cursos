@@ -1,0 +1,48 @@
+{% extends "contenido/encabezado.html" %}
+
+{% block titulo %}Confirmar Eliminacion {% endblock %}
+
+
+
+{%block encabezado%}
+<div class="page-header">
+    <div class="page-title">
+        <h3>ELIMINAR COMENTARIO</h3>
+
+    </div>
+
+</div>
+{%endblock%}
+
+{% block contenedor %}
+
+<main class="px-10">
+
+
+    <div>
+        <table class="table table-bordered table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Profesor</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Inscritos</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+                {%for curso in cursos%}
+                <tr>
+                    <td class="text-center"><img src="{{curso.imagen.url}}" alt=""alt=""width="100" height="120" class="img-media"></td>
+                    <td>{{curso.nombre}}</td>
+                    <td>{{curso.profesor}}</td>
+                    <td>{{curso.horario}}</td>
+                    <td>{{curso.numAlumnos}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+        
+{% endblock %}

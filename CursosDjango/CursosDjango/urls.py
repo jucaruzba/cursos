@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from unicodedata import name
 from django.contrib import admin
 from django.urls import path
 from contenido import views
@@ -23,8 +24,22 @@ urlpatterns = [
 
         path('',views_nuevo.nuevo,name="Principal"),
 
-    path('contacto/',views.contacto, name="Contacto"),
-    path('cursos/',views.cursos, name="Cursos")
+    path('contacto/',views_nuevo.contacto, name="Contacto"),
+    path('cursos/',views.cursos, name="Cursos"),
+    path('registrar/', views_nuevo.registrar, name="Registrar"),
+    path('eliminarComentario/<int:id>',views_nuevo.eliminarActividadContacto,name="Eliminar"),
+    path('comentarios/',views_nuevo.comentarios,name="Comentarios"),
+    path('editarComentario/<int:id>/',views_nuevo.consultar,name="Consulta"),
+    path("edit/<int:id>/",views_nuevo.editar, name="Editar"),
+        #CONSULTAS
+    path("consultas1",views_nuevo.consultar1, name="Consultas"),
+    path("consultas2",views_nuevo.consultar2, name="Consultas2"),
+    path("consultas3",views_nuevo.consultar3, name="Consultas3"),
+    path("consultas4",views_nuevo.consultar4, name="Consultas4"),
+    path("consultas5",views_nuevo.consultar5, name="Consultas5"),
+    path("consultas6",views_nuevo.consultar6, name="Consultas6"),
+    path("consultas7",views_nuevo.consultar7, name="Consultas7"),
+    path("seguridad",views_nuevo.seguridad, name="Seguridad"),
 ]
 
 if settings.DEBUG:

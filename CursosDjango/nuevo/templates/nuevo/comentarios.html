@@ -1,0 +1,46 @@
+{% extends "contenido/encabezado.html" %}
+
+{% block titulo %}COMENTARIOS {% endblock %}
+
+
+{%block encabezado%}
+<div class="page-header">
+    <div class="page-title text-center">
+        <h3>COMENTARIOS</h3>
+
+    </div>
+
+</div>
+{%endblock%}
+
+
+{% block contenedor %}
+    <main class="form-signin w-100 m-auto">
+        <div>
+            <table class="table table-bordered table-dark" description="">
+                <caption>
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Mensaje</th>
+                        <th></th>
+                        <th></th>
+    
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    {%for comentario in comentarios%}
+                    <tr>
+                        <td class="text-semibold">{{comentario.usuario}}</td>
+                        <td class="muted">{{comentario.mensaje}}</td>
+                        <td class="muted text-center"><a  class="text-light" href="{%url 'Consulta' comentario.id%}">Edit</td>
+                        <td class="muted text-center text-dark"><a class="text-light"  href="{%url 'Eliminar' comentario.id%}">Delete</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table> 
+        </div>
+    
+      </main>
+{% endblock %}
