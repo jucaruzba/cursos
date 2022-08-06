@@ -3,17 +3,34 @@
 {% block titulo %}CONTACTO {% endblock %}
 
 {% block contenedor %}
-    <h2>Contacto</h2>
-    <p>Nombre: <input type="text" name="nombre"></input></p>
-    <p>Correo electronico: <input type="email" name="email"></input></p>
-
-    <p>Selecciona curso: </p><select name="cursos" id="cursos">
-    <option value="bd">Base de datos</option>
-    <option value="pro">Programacion</option>
-    <option value="in">Ingles</option>
-    <option value="seg">Seguridad informatica</option>
-    </select>
-
-    <p>Comentarios: </p> <p> <textarea cols="50" rows="10"></textarea></p>
-    <p><input type="Button" name="enviar" value="Enviar"></input></p>
+    <main class="form-signin w-100 m-auto">
+        {%load static%}
+        <form>
+          <img class="mb-4" src=" {%static 'inicio/img/contacto.png'%} " alt="" width="72" height="57">
+          <h1 class="h3 mb-3 fw-normal">Contactanos</h1>
+      
+          <div class="form-floating p-2">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
+            <label for="floatingInput">Nombre</label>
+          </div>
+          <div class="form-floating p-2">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating p-2">
+            <p>Selecciona curso: </p><select name="cursos" id="cursos">
+                <option class="form-control" value="bd">Base de datos</option>
+                <option class="form-control" value="pro">Programacion</option>
+                <option class="form-control"value="in">Ingles</option>
+                <option class="form-control" value="seg">Seguridad informatica</option>
+                </select>
+          </div>
+          <div class="form-floating p-2">
+            <input type="textarea"  cols="50" rows="10" class="form-control" id="floatingInput" placeholder="Comentarios">
+            <label for="floatingInput">Comentarios</label>
+          </div>
+      
+          <button class="w-100 btn btn-lg btn-primary p-2" type="submit">Enviar</button>
+        </form>
+      </main>
 {% endblock %}

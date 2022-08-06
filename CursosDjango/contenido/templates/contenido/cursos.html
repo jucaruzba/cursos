@@ -4,10 +4,55 @@
 
 {% block contenedor %}
 <h2>CURSOS DISPONIBLES<h2>
-    <select name="cursos" id="cursos">
-    <option value="bd">Base de datos</option>
-    <option value="pro">Programacion</option>
-    <option value="in">Ingles</option>
-    <option value="seg">Seguridad informatica</option>
-    </select>
+    <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider">
+        {%load static%}
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Analisis de datos <span class="text-muted">"Comprension de datos"</span></h2>
+            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          </div>
+          <div class="col-md-5">
+<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"" src=" {%static 'inicio/img/home.png'%}" alt="">
+
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Programacion orientada a objetos<span class="text-muted">Herencia, polimorfismo y mas.</span></h2>
+            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"" src=" {%static 'inicio/img/registro.png'%}" alt="">
+
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Seguridad informatica <span class="text-muted">Seguridad para web</span></h2>
+            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"" src=" {%static 'inicio/img/contacto.png'%}" alt="">
+
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+      </div><!-- /.container -->
+    
 {% endblock %}
